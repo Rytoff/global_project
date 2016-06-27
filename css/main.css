@@ -4,3 +4,12 @@
 body	{
 	background-color: #f5f5f5;
 }
+main	{
+	height: 980px;
+	background-image: url(../img/bg_ua.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 91%;
+	margin: 0 auto;
+	
+}
