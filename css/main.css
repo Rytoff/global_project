@@ -20,7 +20,8 @@ main header	{
 main header .logo	{
 	float: left;
 	width: 33%;
-	padding: 2%;
+	padding: 2.4%;
+	background-color: rgba(220,220,220,.5);
 	
 }
 main header .logo h1	{
