@@ -23,7 +23,7 @@ main header .logo	{
 	width: 33%;
 	padding: 2.4%;
 	background-color: rgba(220,220,220,.5);
-	background: linear-gradient(90deg, white, black);
+	/*background: linear-gradient(90deg, white, gray);*/
 }
 main header .logo h1	{
 	font-family: 'Poiret One', cursive;
