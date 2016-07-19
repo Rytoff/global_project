@@ -1,63 +1,204 @@
-﻿*	{
+﻿* 	{
 	box-sizing: border-box;
 }
 body	{
-	background-color: #f5f5f5;
+	background-color: #b9b4b4;
+	font-size: small;
 }
-
-main	{
+header	{
+	background-color: #264661;
 	width: 100%;
-	height: auto;
-	background-image: url(../img/bg_ua.jpg);
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	margin: 0 auto;
-}
-main header	{
-	background-color: rgba(240,248,255, .5);
-	width: 100%;
-	/*position: fixed;*/
+	position: fixed;
 	box-shadow: 0 2px 2px rgba(0,0,0,.11);
+	z-index: 99;
 }
-main header .logo	{
+header .logo	{
 	float: left;
 	width: 33%;
-	padding: 2.4%;
-	background-color: rgba(220,220,220,.5);
-	/*background: linear-gradient(90deg, white, gray);*/
+	padding: 1.4%;
 }
-main header .logo h1	{
+header .logo h1	{
 	font-family: 'Poiret One', cursive;
 	font-size: 4vw;
-	
 }
-.logo .team	{
-	color: red;
+.logo .teamL	{
+	color: #e45c5c;
 	font-weight: bold;
+	background-color: #264661;
 }
 .logo .one	{
 	color: white;
 	font-weight: bold;
 	text-shadow: 2px 0 4px gray;
 }
-main header .head_nav	{
+header .head_nav	{
 	float: right;
 	width: 67%;
-/*	background: linear-gradient(90deg, black, gray);
-	color: gray;
-	padding: 2.15%;
+	color: #b9b4b4;
 }
 .head_nav ul	{
-	/*padding: 2.4%;*/
+	
 }
 .head_nav ul li	{
 	display: inline-block;
-	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 1.4vw;
-	padding: 3.6vw 2.1vw;
+	padding: 2.7vw 2.1vw;
+	transition: color .3s ease;
+}
+.head_nav ul li a	{
+	color: #b9b4b4;
+	text-decoration: none;
+	transition: color .3s ease;
+}
+.head_nav ul li a:hover	{
+	color: white;
+	cursor: pointer;
+}
+.head_nav ul li:hover	{
+	color: white;
+	cursor: pointer;
 }
 
+.team	{
+	background-color: #f5f5f5;
+	padding: 8% 0;
+}
+.team h2, .pic h2	{
+	font-size: 200%;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 2.8% 1.4%;
+}
+.team .why	{
+	/*float: left;*/
+	position: relative;
+	display: block;
+	
+}
+.team .nam	{
+	background-color: #f7ce09;
+	color: #071873;
+	padding: 1.1%;
+	margin: .7%;
+	width: 7%;
+	font-weight: bold;
+	text-align: center;
+	left: 4%;
+}
+.team .eto	{
+	background-color: #a286a9;
+	color: black;
+	padding: 1.4%;
+	margin: .7%;
+	width: 9%;
+	font-weight: bold;
+	text-align: center;
+	left: 7%;
+}
+.team .horr	{
+	background-color: rgba(0,0,0,.75);
+	color: #691111;
+	padding: 1%;
+	margin-left: 2%;
+	width: 18%;
+	font-size: 3.5vw;
+	text-shadow: 0 0 4px white;
+	text-transform: uppercase;
+	text-align: center;
+}
+.team .pic	{
+	background-image: url(../img/forest_2_1600_900.jpg);
+	height: 500px;
+	color: #f5f5f5;
+}
 
+/*-----------------------------------main block------------*/
+.main 	{
+	z-index: 9;
+	position: relative;
+	padding: 8% 0;
+	margin: 0 auto;
+	width: 100%;
+	background-color: rgba(22,22,22,1);
+	color: #777777;
+	font-family: 'PT Sans', sans-serif;
+}
+.main h2	{
+	font-size: 1.8vw;
+	font-weight: bold;
+	border-bottom: 1px solid #403c3c;
+}
+.dj	{
+	background-image: url(../img/dj_mod.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+img.face	{
+	margin: .7%;
+	float: right;
+	width: 150px;
+	height: 200px;
+	box-shadow: 0 0 4px gray;
+}
+.tabbed	{
+	width: 23%;
+	float: left;
+}
+.tabbed > input	{
+	display: none;
+}
+.tabbed > label	{
+	display: block;
+	background-color: rgb(22,22,22);
+	width: 18vw;
+	margin: .5vw;
+	padding: 1vw;
+	text-align: right;
+	cursor: pointer;
+	transition: color .3s;
+}
+.tabbed > label:hover,
+.tabbed > input:checked + label	{
+	color: #f5f5f5;
+}
+
+.tabs h2{
+	width: 42%;
+	padding: 1.4%;
+	margin-top: 1.7%;
+	
+}
+.tabs p	{
+	padding: 1.1%;
+	margin-top: 1.4%;
+}
+.tabs > div	{
+	position: absolute;
+	opacity: 0;
+	
+}
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
+#tab-nav-5:checked ~ .tabs > div:nth-of-type(5),
+#tab-nav-6:checked ~ .tabs > div:nth-of-type(6),
+#tab-nav-7:checked ~ .tabs > div:nth-of-type(7),
+#tab-nav-8:checked ~ .tabs > div:nth-of-type(8),
+#tab-nav-9:checked ~ .tabs > div:nth-of-type(9),
+#tab-nav-10:checked ~ .tabs > div:nth-of-type(10)	{
+	opacity: 1;
+	top: 17%;
+	left: 22%;
+	width: 74%;
+	height: 35vw;
+}
+.clearfix:after	{
+	content: "";
+	display: table;
+    clear: both;
+}
 main h1.temp	{
 	text-align: center;
 	padding: 24%;
@@ -72,72 +213,60 @@ main h3.temp	{
 	color: black;
 }
 
-.clearfix:after	{
-	content: "";
-	display: table;
-    clear: both;
+.homeWork	{
+	padding: 8% 0;
+	
+	background: #7ba091;
 }
-.none	{
-	/*opacity: 0;*/
+.person	{
+	height: 70px;
+	background-image: url('http://images.clipartlogo.com/files/images/30/302752/generic-male-avatar-rectangular_t');
+	background-repeat: no-repeat;
+	background-color: #8db7ad;
+	background-size: contain;
+	color: #464444;
 }
-
-/*-----------------------------------main block------------*/
-.main 	{
-	margin: 2% auto;
-	top: 21vw;
-	width: 84vw;
-	background-color: rgba(220,220,220,.5);
-	color: #403c3c;
-	font-family: 'PT Sans', sans-serif;
+.person h2{
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 124%;
+	padding: 4px 64px;
 }
-.main h2	{
-	font-size: 1.8vw;
-	font-weight: bold;
-	border-bottom: 1px solid #1d1d84;
+.person h2 span	{
+	color: gray;
+	
 }
-.tabbed	{
-	width: 23%;
-	/*margin: 50px auto;*/
+.person h3	{
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 110%;
+	padding: 1px 64px;
+}
+.person p	{
+	font-family: verdana, sans-serif;
+	font-size: 80%;
+	padding-left: 64px;
+}
+.interview	{
+	margin: 0 2%;
+	width: 33%;
+	height: 560px;
+	padding: 1%;
 	float: left;
+	font-family: 'Poiret One', cursive;
+	border: 1px solid #afacac;
+	border-radius: 4px;
 }
-.tabbed > input	{
-	display: none;
+.answers h3	{
+	font-size: 112%;
+	color: #eee;
+	padding: 12px 0;
 }
-.tabbed > label	{
-	display: block;
-	background-color: aquamarine;
-	/*float: left; ---------------------нвигашка сбоку*/
-	width: 18vw;
-	margin: .5vw;
-	padding: 1vw;
-	text-align: right;
-	cursor: pointer;
-	transition: background-color .21s;
+div.answers p	{
+	font-family: monospace;
 }
-.tabbed > label:hover,
-.tabbed > input:checked + label	{
-	background-color: blue;
+.answers a	{
+	text-decoration: none;
+	color: #264661;
 }
-.tabs h2{
-	padding: 1.4%;
-	margin-top: 1.7%;
-}
-.tabs > div	{
-	position: absolute;
-	opacity: 0;
-}
-#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
-#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
-#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
-#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
-#tab-nav-5:checked ~ .tabs > div:nth-of-type(5),
-#tab-nav-6:checked ~ .tabs > div:nth-of-type(6),
-#tab-nav-7:checked ~ .tabs > div:nth-of-type(7),
-#tab-nav-8:checked ~ .tabs > div:nth-of-type(8),
-#tab-nav-9:checked ~ .tabs > div:nth-of-type(9),
-#tab-nav-10:checked ~ .tabs > div:nth-of-type(10)	{
-	opacity: 1;
-	top: 17%;
-	left: 35%;
-	width: 63%;
+.answers a:hover	{
+	text-decoration: underline;
 }
